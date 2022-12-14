@@ -7428,6 +7428,7 @@ jQuery(document).ready(function($){
     var $oldScroll = $(window).scrollTop();
 
     $(window).scroll(function() {
+        if (window.matchMedia('(min-width: 1100px)').matches) {
         $navbar.css("top", $admin.css("padding-top"));
         var $scrollC = $(this).scrollTop();
 
@@ -7455,6 +7456,7 @@ jQuery(document).ready(function($){
         }
 
         $oldScroll = $scrollC;
+    }
     });
 
 
